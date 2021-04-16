@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,10 +27,9 @@ SECRET_KEY = 'w^#y=gqy$pw7@3azqq)xiv&yv6#hg*@fhp2kl@_6p9ftx6533w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = [
-#     'stupid-gecko-11.loca.lt',
-    
-#     ]
+ALLOWED_HOSTS = [
+    '*'
+    ]
 
 
 # Идентифицируем приложения
@@ -46,9 +47,14 @@ INSTALLED_APPS = [
     'djoser', # Библиотека для авторизации по токену
     'rest_framework.authtoken',
     'rest_framework_simplejwt', # Библиотека для для аутентификации по токену
+    'django_clickhouse',
+    'infi.django_rest_utils',
+    'infi.clickhouse_orm',
+    'django_ipgeobase'
+    # 'enum34',
+    # 'python-dateutil',
 
 ]
-
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware', 
     'django.middleware.security.SecurityMiddleware',
@@ -90,7 +96,10 @@ WSGI_APPLICATION = 'service.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-
+# Celery Configuration Options
+CELERY_TIMEZONE = "Europe/Moscow"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
 
 # База данных
 
@@ -101,10 +110,33 @@ DATABASES = {
         'USER': 'student',
         'HOST': 'localhost',
         'PASSWORD': 'iamstudent',
+        'TIME_ZONE': 'Europe/Moscow'
 
     }
 }
-
+CLICKHOUSE_DATABASES = {
+    # Connection name to refer in using(...) method
+    'default': {
+        'db_name': 'tutor',
+        'username': 'default',
+        'password': ''
+    }
+}
+CLICKHOUSE_REDIS_CONFIG = {
+    'host': '127.0.0.1',
+    'port': 6379,
+    'db': 8,
+    'socket_timeout': 10
+}
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CLICKHOUSE_CELERY_QUEUE = 'clickhouse'
+CELERYBEAT_SCHEDULE = {
+    'clickhouse_auto_sync': {
+        'task': 'django_clickhouse.tasks.clickhouse_auto_sync',
+        'schedule': timedelta(seconds=2),  # Every 2 seconds
+        'options': {'expires': 1, 'queue': CLICKHOUSE_CELERY_QUEUE}
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -138,6 +170,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+# TIME_ZONE = 'Europe/Moscow'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
@@ -152,14 +185,17 @@ DJOSER = {
     'SEND_ACTIVATION_EMAIL': False,
     'SERIALIZERS': {},
 }
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'service.settings')
+REDIS_HOST = '127.0.0.1'
+REDIS_PORT = '6379'
 
 STATIC_URL = '/static/'
 REST_FRAMEWORK = {
     # Используем для доступа django стандарты,
     # Доступ только чтение для неавторизированных пользователей.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    # ],
      'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication', # Указываем тип авторизации
         'rest_framework_simplejwt.authentication.JWTAuthentication', #Не забудьте изменить настройки аутентификации для DRF, чтобы отразить использование JWTS.
