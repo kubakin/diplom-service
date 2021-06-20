@@ -16,7 +16,7 @@ from datetime import timedelta
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+APP_BASE_DIR = os.path.join(BASE_DIR, 'app')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -50,9 +50,8 @@ INSTALLED_APPS = [
     'django_clickhouse',
     'infi.django_rest_utils',
     'infi.clickhouse_orm',
-    'django_ipgeobase'
-    # 'enum34',
-    # 'python-dateutil',
+    'django_ipgeobase',
+    'pagedown.apps.PagedownConfig',
 
 ]
 MIDDLEWARE = [
@@ -183,7 +182,10 @@ DJOSER = {
     'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': '#/activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': False,
-    'SERIALIZERS': {},
+    'SERIALIZERS': {
+        # 'user': 'app.serializers.UserSerializer',
+    'current_user': 'app.serializers.UserSerializer',
+    },
 }
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'service.settings')
 REDIS_HOST = '127.0.0.1'
@@ -203,3 +205,6 @@ REST_FRAMEWORK = {
       #  (...)
     ),
 }
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(APP_BASE_DIR, 'static/')
+# STATIC_ROOT= os.path.join(PROJECT_DIR,'static_media/')

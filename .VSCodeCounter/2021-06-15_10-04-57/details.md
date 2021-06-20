@@ -1,0 +1,225 @@
+# Details
+
+Date : 2021-06-15 10:04:57
+
+Directory /home/kubakin/Diplom/service
+
+Total : 210 files,  30932 codes, 6838 comments, 6924 blanks, all 44694 lines
+
+[summary](results.md)
+
+## Files
+| filename | language | code | comment | blank | total |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| [.idea/inspectionProfiles/profiles_settings.xml](/.idea/inspectionProfiles/profiles_settings.xml) | XML | 6 | 0 | 0 | 6 |
+| [.idea/misc.xml](/.idea/misc.xml) | XML | 7 | 0 | 0 | 7 |
+| [.idea/modules.xml](/.idea/modules.xml) | XML | 8 | 0 | 0 | 8 |
+| [.idea/service.iml](/.idea/service.iml) | XML | 12 | 0 | 0 | 12 |
+| [.idea/vcs.xml](/.idea/vcs.xml) | XML | 8 | 0 | 0 | 8 |
+| [Pipfile](/Pipfile) | toml | 8 | 0 | 4 | 12 |
+| [app/__init__.py](/app/__init__.py) | Python | 0 | 0 | 1 | 1 |
+| [app/admin.py](/app/admin.py) | Python | 13 | 1 | 2 | 16 |
+| [app/apps.py](/app/apps.py) | Python | 3 | 2 | 2 | 7 |
+| [app/clickhouse_migrations/0001_initial.py](/app/clickhouse_migrations/0001_initial.py) | Python | 6 | 0 | 3 | 9 |
+| [app/clickhouse_migrations/__init__.py](/app/clickhouse_migrations/__init__.py) | Python | 0 | 0 | 1 | 1 |
+| [app/clickhouse_models.py](/app/clickhouse_models.py) | Python | 17 | 0 | 3 | 20 |
+| [app/constructor.py](/app/constructor.py) | Python | 40 | 0 | 2 | 42 |
+| [app/methodsML.py](/app/methodsML.py) | Python | 31 | 2 | 8 | 41 |
+| [app/migrations/0001_initial.py](/app/migrations/0001_initial.py) | Python | 51 | 1 | 7 | 59 |
+| [app/migrations/0002_auto_20210414_1353.py](/app/migrations/0002_auto_20210414_1353.py) | Python | 15 | 1 | 6 | 22 |
+| [app/migrations/0003_sitereport.py](/app/migrations/0003_sitereport.py) | Python | 17 | 1 | 6 | 24 |
+| [app/migrations/0004_auto_20210418_1640.py](/app/migrations/0004_auto_20210418_1640.py) | Python | 33 | 1 | 6 | 40 |
+| [app/migrations/0005_auto_20210418_1928.py](/app/migrations/0005_auto_20210418_1928.py) | Python | 25 | 1 | 6 | 32 |
+| [app/migrations/0006_auto_20210509_1141.py](/app/migrations/0006_auto_20210509_1141.py) | Python | 32 | 1 | 6 | 39 |
+| [app/migrations/0007_auto_20210509_1242.py](/app/migrations/0007_auto_20210509_1242.py) | Python | 18 | 1 | 6 | 25 |
+| [app/migrations/0008_auto_20210510_1502.py](/app/migrations/0008_auto_20210510_1502.py) | Python | 20 | 1 | 6 | 27 |
+| [app/migrations/0009_profile.py](/app/migrations/0009_profile.py) | Python | 18 | 1 | 6 | 25 |
+| [app/migrations/0010_auto_20210511_0002.py](/app/migrations/0010_auto_20210511_0002.py) | Python | 15 | 1 | 6 | 22 |
+| [app/migrations/0011_auto_20210512_0955.py](/app/migrations/0011_auto_20210512_0955.py) | Python | 12 | 1 | 6 | 19 |
+| [app/migrations/0012_dogovor.py](/app/migrations/0012_dogovor.py) | Python | 20 | 1 | 6 | 27 |
+| [app/migrations/__init__.py](/app/migrations/__init__.py) | Python | 0 | 0 | 1 | 1 |
+| [app/models.py](/app/models.py) | Python | 44 | 2 | 16 | 62 |
+| [app/serializers.py](/app/serializers.py) | Python | 66 | 7 | 25 | 98 |
+| [app/services.py](/app/services.py) | Python | 41 | 8 | 10 | 59 |
+| [app/sqlConstructor.py](/app/sqlConstructor.py) | Python | 4 | 0 | 1 | 5 |
+| [app/static/admin/css/autocomplete.css](/app/static/admin/css/autocomplete.css) | CSS | 213 | 0 | 48 | 261 |
+| [app/static/admin/css/base.css](/app/static/admin/css/base.css) | CSS | 761 | 22 | 184 | 967 |
+| [app/static/admin/css/changelists.css](/app/static/admin/css/changelists.css) | CSS | 285 | 7 | 63 | 355 |
+| [app/static/admin/css/dashboard.css](/app/static/admin/css/dashboard.css) | CSS | 18 | 2 | 7 | 27 |
+| [app/static/admin/css/fonts.css](/app/static/admin/css/fonts.css) | CSS | 18 | 0 | 3 | 21 |
+| [app/static/admin/css/forms.css](/app/static/admin/css/forms.css) | CSS | 413 | 11 | 104 | 528 |
+| [app/static/admin/css/login.css](/app/static/admin/css/login.css) | CSS | 65 | 1 | 14 | 80 |
+| [app/static/admin/css/nav_sidebar.css](/app/static/admin/css/nav_sidebar.css) | CSS | 100 | 0 | 20 | 120 |
+| [app/static/admin/css/pagedown.css](/app/static/admin/css/pagedown.css) | CSS | 266 | 4 | 55 | 325 |
+| [app/static/admin/css/responsive.css](/app/static/admin/css/responsive.css) | CSS | 753 | 28 | 222 | 1,003 |
+| [app/static/admin/css/responsive_rtl.css](/app/static/admin/css/responsive_rtl.css) | CSS | 63 | 2 | 16 | 81 |
+| [app/static/admin/css/rtl.css](/app/static/admin/css/rtl.css) | CSS | 185 | 9 | 56 | 250 |
+| [app/static/admin/css/vendor/select2/LICENSE-SELECT2.md](/app/static/admin/css/vendor/select2/LICENSE-SELECT2.md) | Markdown | 17 | 0 | 5 | 22 |
+| [app/static/admin/css/vendor/select2/select2.css](/app/static/admin/css/vendor/select2/select2.css) | CSS | 425 | 0 | 57 | 482 |
+| [app/static/admin/css/vendor/select2/select2.min.css](/app/static/admin/css/vendor/select2/select2.min.css) | CSS | 1 | 0 | 1 | 2 |
+| [app/static/admin/css/widgets.css](/app/static/admin/css/widgets.css) | CSS | 465 | 8 | 102 | 575 |
+| [app/static/admin/fonts/LICENSE.txt](/app/static/admin/fonts/LICENSE.txt) | Django txt | 169 | 0 | 34 | 203 |
+| [app/static/admin/fonts/README.txt](/app/static/admin/fonts/README.txt) | Django txt | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/README.txt](/app/static/admin/img/README.txt) | Django txt | 6 | 0 | 2 | 8 |
+| [app/static/admin/img/calendar-icons.svg](/app/static/admin/img/calendar-icons.svg) | XML | 14 | 0 | 1 | 15 |
+| [app/static/admin/img/gis/move_vertex_off.svg](/app/static/admin/img/gis/move_vertex_off.svg) | XML | 1 | 0 | 0 | 1 |
+| [app/static/admin/img/gis/move_vertex_on.svg](/app/static/admin/img/gis/move_vertex_on.svg) | XML | 1 | 0 | 0 | 1 |
+| [app/static/admin/img/icon-addlink.svg](/app/static/admin/img/icon-addlink.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/icon-alert.svg](/app/static/admin/img/icon-alert.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/icon-calendar.svg](/app/static/admin/img/icon-calendar.svg) | XML | 9 | 0 | 1 | 10 |
+| [app/static/admin/img/icon-changelink.svg](/app/static/admin/img/icon-changelink.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/icon-clock.svg](/app/static/admin/img/icon-clock.svg) | XML | 9 | 0 | 1 | 10 |
+| [app/static/admin/img/icon-deletelink.svg](/app/static/admin/img/icon-deletelink.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/icon-no.svg](/app/static/admin/img/icon-no.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/icon-unknown-alt.svg](/app/static/admin/img/icon-unknown-alt.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/icon-unknown.svg](/app/static/admin/img/icon-unknown.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/icon-viewlink.svg](/app/static/admin/img/icon-viewlink.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/icon-yes.svg](/app/static/admin/img/icon-yes.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/inline-delete.svg](/app/static/admin/img/inline-delete.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/search.svg](/app/static/admin/img/search.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/selector-icons.svg](/app/static/admin/img/selector-icons.svg) | XML | 34 | 0 | 1 | 35 |
+| [app/static/admin/img/sorting-icons.svg](/app/static/admin/img/sorting-icons.svg) | XML | 19 | 0 | 1 | 20 |
+| [app/static/admin/img/tooltag-add.svg](/app/static/admin/img/tooltag-add.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/img/tooltag-arrowright.svg](/app/static/admin/img/tooltag-arrowright.svg) | XML | 3 | 0 | 1 | 4 |
+| [app/static/admin/js/SelectBox.js](/app/static/admin/js/SelectBox.js) | JavaScript | 105 | 5 | 1 | 111 |
+| [app/static/admin/js/SelectFilter2.js](/app/static/admin/js/SelectFilter2.js) | JavaScript | 190 | 27 | 20 | 237 |
+| [app/static/admin/js/actions.js](/app/static/admin/js/actions.js) | JavaScript | 147 | 6 | 2 | 155 |
+| [app/static/admin/js/actions.min.js](/app/static/admin/js/actions.min.js) | JavaScript | 7 | 0 | 1 | 8 |
+| [app/static/admin/js/admin/DateTimeShortcuts.js](/app/static/admin/js/admin/DateTimeShortcuts.js) | JavaScript | 325 | 66 | 27 | 418 |
+| [app/static/admin/js/admin/RelatedObjectLookups.js](/app/static/admin/js/admin/RelatedObjectLookups.js) | JavaScript | 141 | 7 | 12 | 160 |
+| [app/static/admin/js/autocomplete.js](/app/static/admin/js/autocomplete.js) | JavaScript | 33 | 2 | 4 | 39 |
+| [app/static/admin/js/calendar.js](/app/static/admin/js/calendar.js) | JavaScript | 164 | 28 | 16 | 208 |
+| [app/static/admin/js/cancel.js](/app/static/admin/js/cancel.js) | JavaScript | 23 | 3 | 3 | 29 |
+| [app/static/admin/js/change_form.js](/app/static/admin/js/change_form.js) | JavaScript | 14 | 2 | 1 | 17 |
+| [app/static/admin/js/collapse.js](/app/static/admin/js/collapse.js) | JavaScript | 37 | 6 | 1 | 44 |
+| [app/static/admin/js/collapse.min.js](/app/static/admin/js/collapse.min.js) | JavaScript | 2 | 0 | 1 | 3 |
+| [app/static/admin/js/core.js](/app/static/admin/js/core.js) | JavaScript | 130 | 19 | 15 | 164 |
+| [app/static/admin/js/inlines.js](/app/static/admin/js/inlines.js) | JavaScript | 263 | 59 | 27 | 349 |
+| [app/static/admin/js/inlines.min.js](/app/static/admin/js/inlines.min.js) | JavaScript | 11 | 0 | 1 | 12 |
+| [app/static/admin/js/jquery.init.js](/app/static/admin/js/jquery.init.js) | JavaScript | 2 | 6 | 1 | 9 |
+| [app/static/admin/js/nav_sidebar.js](/app/static/admin/js/nav_sidebar.js) | JavaScript | 37 | 0 | 3 | 40 |
+| [app/static/admin/js/pagedown.js](/app/static/admin/js/pagedown.js) | JavaScript | 17 | 11 | 3 | 31 |
+| [app/static/admin/js/popup_response.js](/app/static/admin/js/popup_response.js) | JavaScript | 15 | 1 | 1 | 17 |
+| [app/static/admin/js/prepopulate.js](/app/static/admin/js/prepopulate.js) | JavaScript | 29 | 10 | 5 | 44 |
+| [app/static/admin/js/prepopulate.min.js](/app/static/admin/js/prepopulate.min.js) | JavaScript | 1 | 0 | 1 | 2 |
+| [app/static/admin/js/prepopulate_init.js](/app/static/admin/js/prepopulate_init.js) | JavaScript | 11 | 0 | 1 | 12 |
+| [app/static/admin/js/urlify.js](/app/static/admin/js/urlify.js) | JavaScript | 172 | 8 | 6 | 186 |
+| [app/static/admin/js/vendor/jquery/LICENSE.txt](/app/static/admin/js/vendor/jquery/LICENSE.txt) | Django txt | 17 | 0 | 4 | 21 |
+| [app/static/admin/js/vendor/jquery/jquery.js](/app/static/admin/js/vendor/jquery/jquery.js) | JavaScript | 6,906 | 1,890 | 2,077 | 10,873 |
+| [app/static/admin/js/vendor/jquery/jquery.min.js](/app/static/admin/js/vendor/jquery/jquery.min.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/LICENSE.md](/app/static/admin/js/vendor/select2/LICENSE.md) | Markdown | 17 | 0 | 5 | 22 |
+| [app/static/admin/js/vendor/select2/i18n/af.js](/app/static/admin/js/vendor/select2/i18n/af.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ar.js](/app/static/admin/js/vendor/select2/i18n/ar.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/az.js](/app/static/admin/js/vendor/select2/i18n/az.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/bg.js](/app/static/admin/js/vendor/select2/i18n/bg.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/bn.js](/app/static/admin/js/vendor/select2/i18n/bn.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/bs.js](/app/static/admin/js/vendor/select2/i18n/bs.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ca.js](/app/static/admin/js/vendor/select2/i18n/ca.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/cs.js](/app/static/admin/js/vendor/select2/i18n/cs.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/da.js](/app/static/admin/js/vendor/select2/i18n/da.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/de.js](/app/static/admin/js/vendor/select2/i18n/de.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/dsb.js](/app/static/admin/js/vendor/select2/i18n/dsb.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/el.js](/app/static/admin/js/vendor/select2/i18n/el.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/en.js](/app/static/admin/js/vendor/select2/i18n/en.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/es.js](/app/static/admin/js/vendor/select2/i18n/es.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/et.js](/app/static/admin/js/vendor/select2/i18n/et.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/eu.js](/app/static/admin/js/vendor/select2/i18n/eu.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/fa.js](/app/static/admin/js/vendor/select2/i18n/fa.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/fi.js](/app/static/admin/js/vendor/select2/i18n/fi.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/fr.js](/app/static/admin/js/vendor/select2/i18n/fr.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/gl.js](/app/static/admin/js/vendor/select2/i18n/gl.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/he.js](/app/static/admin/js/vendor/select2/i18n/he.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/hi.js](/app/static/admin/js/vendor/select2/i18n/hi.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/hr.js](/app/static/admin/js/vendor/select2/i18n/hr.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/hsb.js](/app/static/admin/js/vendor/select2/i18n/hsb.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/hu.js](/app/static/admin/js/vendor/select2/i18n/hu.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/hy.js](/app/static/admin/js/vendor/select2/i18n/hy.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/id.js](/app/static/admin/js/vendor/select2/i18n/id.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/is.js](/app/static/admin/js/vendor/select2/i18n/is.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/it.js](/app/static/admin/js/vendor/select2/i18n/it.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ja.js](/app/static/admin/js/vendor/select2/i18n/ja.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ka.js](/app/static/admin/js/vendor/select2/i18n/ka.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/km.js](/app/static/admin/js/vendor/select2/i18n/km.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ko.js](/app/static/admin/js/vendor/select2/i18n/ko.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/lt.js](/app/static/admin/js/vendor/select2/i18n/lt.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/lv.js](/app/static/admin/js/vendor/select2/i18n/lv.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/mk.js](/app/static/admin/js/vendor/select2/i18n/mk.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ms.js](/app/static/admin/js/vendor/select2/i18n/ms.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/nb.js](/app/static/admin/js/vendor/select2/i18n/nb.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ne.js](/app/static/admin/js/vendor/select2/i18n/ne.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/nl.js](/app/static/admin/js/vendor/select2/i18n/nl.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/pl.js](/app/static/admin/js/vendor/select2/i18n/pl.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ps.js](/app/static/admin/js/vendor/select2/i18n/ps.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/pt-BR.js](/app/static/admin/js/vendor/select2/i18n/pt-BR.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/pt.js](/app/static/admin/js/vendor/select2/i18n/pt.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ro.js](/app/static/admin/js/vendor/select2/i18n/ro.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/ru.js](/app/static/admin/js/vendor/select2/i18n/ru.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/sk.js](/app/static/admin/js/vendor/select2/i18n/sk.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/sl.js](/app/static/admin/js/vendor/select2/i18n/sl.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/sq.js](/app/static/admin/js/vendor/select2/i18n/sq.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/sr-Cyrl.js](/app/static/admin/js/vendor/select2/i18n/sr-Cyrl.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/sr.js](/app/static/admin/js/vendor/select2/i18n/sr.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/sv.js](/app/static/admin/js/vendor/select2/i18n/sv.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/th.js](/app/static/admin/js/vendor/select2/i18n/th.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/tk.js](/app/static/admin/js/vendor/select2/i18n/tk.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/tr.js](/app/static/admin/js/vendor/select2/i18n/tr.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/uk.js](/app/static/admin/js/vendor/select2/i18n/uk.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/vi.js](/app/static/admin/js/vendor/select2/i18n/vi.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/zh-CN.js](/app/static/admin/js/vendor/select2/i18n/zh-CN.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/i18n/zh-TW.js](/app/static/admin/js/vendor/select2/i18n/zh-TW.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/admin/js/vendor/select2/select2.full.js](/app/static/admin/js/vendor/select2/select2.full.js) | JavaScript | 5,102 | 384 | 1,335 | 6,821 |
+| [app/static/admin/js/vendor/select2/select2.full.min.js](/app/static/admin/js/vendor/select2/select2.full.min.js) | JavaScript | 1 | 1 | 0 | 2 |
+| [app/static/admin/js/vendor/xregexp/LICENSE.txt](/app/static/admin/js/vendor/xregexp/LICENSE.txt) | Django txt | 17 | 0 | 5 | 22 |
+| [app/static/admin/js/vendor/xregexp/xregexp.js](/app/static/admin/js/vendor/xregexp/xregexp.js) | JavaScript | 3,138 | 1,271 | 244 | 4,653 |
+| [app/static/admin/js/vendor/xregexp/xregexp.min.js](/app/static/admin/js/vendor/xregexp/xregexp.min.js) | JavaScript | 129 | 31 | 1 | 161 |
+| [app/static/pagedown-extra/Markdown.Extra.js](/app/static/pagedown-extra/Markdown.Extra.js) | JavaScript | 602 | 140 | 133 | 875 |
+| [app/static/pagedown-extra/pagedown/Markdown.Converter.js](/app/static/pagedown-extra/pagedown/Markdown.Converter.js) | JavaScript | 518 | 648 | 235 | 1,401 |
+| [app/static/pagedown.css](/app/static/pagedown.css) | CSS | 19 | 1 | 3 | 23 |
+| [app/static/pagedown/LICENSE.txt](/app/static/pagedown/LICENSE.txt) | Django txt | 23 | 0 | 10 | 33 |
+| [app/static/pagedown/Markdown.Converter.js](/app/static/pagedown/Markdown.Converter.js) | JavaScript | 589 | 781 | 253 | 1,623 |
+| [app/static/pagedown/Markdown.Editor.js](/app/static/pagedown/Markdown.Editor.js) | JavaScript | 1,577 | 340 | 416 | 2,333 |
+| [app/static/pagedown/Markdown.Sanitizer.js](/app/static/pagedown/Markdown.Sanitizer.js) | JavaScript | 84 | 22 | 19 | 125 |
+| [app/static/pagedown/README.txt](/app/static/pagedown/README.txt) | Django txt | 0 | 0 | 1 | 1 |
+| [app/static/pagedown/demo/browser/demo.css](/app/static/pagedown/demo/browser/demo.css) | CSS | 106 | 0 | 21 | 127 |
+| [app/static/pagedown/demo/browser/demo.html](/app/static/pagedown/demo/browser/demo.html) | Django HTML | 73 | 0 | 29 | 102 |
+| [app/static/pagedown/demo/node/demo.js](/app/static/pagedown/demo/node/demo.js) | JavaScript | 31 | 3 | 11 | 45 |
+| [app/static/pagedown/local/Markdown.local.fr.js](/app/static/pagedown/local/Markdown.local.fr.js) | JavaScript | 29 | 3 | 11 | 43 |
+| [app/static/pagedown/node-pagedown.js](/app/static/pagedown/node-pagedown.js) | JavaScript | 2 | 0 | 1 | 3 |
+| [app/static/pagedown_init.js](/app/static/pagedown_init.js) | JavaScript | 117 | 4 | 15 | 136 |
+| [app/static/rest_framework/css/bootstrap-theme.min.css](/app/static/rest_framework/css/bootstrap-theme.min.css) | CSS | 1 | 5 | 0 | 6 |
+| [app/static/rest_framework/css/bootstrap-tweaks.css](/app/static/rest_framework/css/bootstrap-tweaks.css) | CSS | 174 | 15 | 45 | 234 |
+| [app/static/rest_framework/css/bootstrap.min.css](/app/static/rest_framework/css/bootstrap.min.css) | CSS | 1 | 5 | 0 | 6 |
+| [app/static/rest_framework/css/default.css](/app/static/rest_framework/css/default.css) | CSS | 62 | 3 | 18 | 83 |
+| [app/static/rest_framework/css/font-awesome-4.0.3.css](/app/static/rest_framework/css/font-awesome-4.0.3.css) | CSS | 1,329 | 9 | 1 | 1,339 |
+| [app/static/rest_framework/css/prettify.css](/app/static/rest_framework/css/prettify.css) | CSS | 27 | 1 | 2 | 30 |
+| [app/static/rest_framework/docs/css/base.css](/app/static/rest_framework/docs/css/base.css) | CSS | 291 | 4 | 65 | 360 |
+| [app/static/rest_framework/docs/css/highlight.css](/app/static/rest_framework/docs/css/highlight.css) | CSS | 101 | 6 | 19 | 126 |
+| [app/static/rest_framework/docs/css/jquery.json-view.min.css](/app/static/rest_framework/docs/css/jquery.json-view.min.css) | CSS | 11 | 0 | 0 | 11 |
+| [app/static/rest_framework/docs/js/api.js](/app/static/rest_framework/docs/js/api.js) | JavaScript | 264 | 21 | 37 | 322 |
+| [app/static/rest_framework/docs/js/highlight.pack.js](/app/static/rest_framework/docs/js/highlight.pack.js) | JavaScript | 2 | 0 | 0 | 2 |
+| [app/static/rest_framework/docs/js/jquery.json-view.min.js](/app/static/rest_framework/docs/js/jquery.json-view.min.js) | JavaScript | 1 | 6 | 0 | 7 |
+| [app/static/rest_framework/fonts/fontawesome-webfont.svg](/app/static/rest_framework/fonts/fontawesome-webfont.svg) | XML | 414 | 0 | 1 | 415 |
+| [app/static/rest_framework/fonts/glyphicons-halflings-regular.svg](/app/static/rest_framework/fonts/glyphicons-halflings-regular.svg) | XML | 288 | 0 | 1 | 289 |
+| [app/static/rest_framework/js/ajax-form.js](/app/static/rest_framework/js/ajax-form.js) | JavaScript | 59 | 57 | 12 | 128 |
+| [app/static/rest_framework/js/bootstrap.min.js](/app/static/rest_framework/js/bootstrap.min.js) | JavaScript | 1 | 5 | 0 | 6 |
+| [app/static/rest_framework/js/coreapi-0.1.1.js](/app/static/rest_framework/js/coreapi-0.1.1.js) | JavaScript | 1,163 | 613 | 267 | 2,043 |
+| [app/static/rest_framework/js/csrf.js](/app/static/rest_framework/js/csrf.js) | JavaScript | 34 | 9 | 10 | 53 |
+| [app/static/rest_framework/js/default.js](/app/static/rest_framework/js/default.js) | JavaScript | 32 | 6 | 10 | 48 |
+| [app/static/rest_framework/js/jquery-3.5.1.min.js](/app/static/rest_framework/js/jquery-3.5.1.min.js) | JavaScript | 1 | 1 | 1 | 3 |
+| [app/static/rest_framework/js/prettify-min.js](/app/static/rest_framework/js/prettify-min.js) | JavaScript | 28 | 0 | 1 | 29 |
+| [app/tasks.py](/app/tasks.py) | Python | 32 | 1 | 7 | 40 |
+| [app/tests.py](/app/tests.py) | Python | 1 | 1 | 2 | 4 |
+| [app/urls.py](/app/urls.py) | Python | 14 | 2 | 3 | 19 |
+| [app/views.py](/app/views.py) | Python | 95 | 10 | 20 | 125 |
+| [manage.py](/manage.py) | Python | 15 | 3 | 5 | 23 |
+| [service/__init__.py](/service/__init__.py) | Python | 2 | 0 | 1 | 3 |
+| [service/asgi.py](/service/asgi.py) | Python | 4 | 8 | 5 | 17 |
+| [service/celery.py](/service/celery.py) | Python | 19 | 6 | 7 | 32 |
+| [service/data_file.json](/service/data_file.json) | JSON | 5 | 0 | 2 | 7 |
+| [service/data_file.txt](/service/data_file.txt) | Django txt | 315 | 0 | 132 | 447 |
+| [service/help.py](/service/help.py) | Python | 20 | 2 | 3 | 25 |
+| [service/settings.py](/service/settings.py) | Python | 135 | 43 | 33 | 211 |
+| [service/urls.py](/service/urls.py) | Python | 12 | 15 | 3 | 30 |
+| [service/wsgi.py](/service/wsgi.py) | Python | 4 | 8 | 5 | 17 |
+
+[summary](results.md)

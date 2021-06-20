@@ -1,8 +1,9 @@
 import random
 
 from django_ipgeobase.models import IPGeoBase
-
+from .constructor import Constructor
 from app.serializers import MySerializer
+from .models import Dogovor
 
 
 def getGeo(ip='185.90.100.111'):
@@ -36,32 +37,23 @@ def detectFraud(model, name, site):
     return random.uniform(0,1)
 
 
-# def some():
-#     for i in range(12):
-
 def filterQuery(model, dct):
-    day = ''
-    asDay = ''
-    fields = ['year', 'month', 'count']
-    if 'range' in dct:
-        if dct['range'] == 'lastYear':
-            pass
-    if 'step' in dct:
-        if dct['step'] == 'day':
-            day = 'toDayOfYear(date)'
-            asDay = 'AS day,'
-            fields.append('day')
-            print(day)
-        if dct['step'] == 'hour':
-            day = 'toHour(date)'
-            asDay = 'AS hour,'
-            fields.append('hour')
-            print(day)
-    # print("SELECT {0} {2} toMonth(date) AS month, toYear(date) AS year,count() AS count　"
-    #                                              "FROM `clickhousehistory` where siteOfUser='{1}'"
-    #                                              "GROUP BY {0}, toMonth(date), toYear(date)".format(day, dct['site'], asDay))
-    qs = model.get_database().select("SELECT {0} {2} toMonth(date) AS month, toYear(date) AS year,count() AS count　"
-                                                 "FROM `clickhousehistory` where siteOfUser='{1}'"
-                                                 "GROUP BY {0}, toMonth(date), toYear(date) order by hour".format(day, dct['site'], asDay))
-    # print(qs)
+    fields = ['concat', 'count']
+    sqlQuery = Constructor
+    sqlQuery.stps(sqlQuery, step='day')
+    sqlQuery.fromRangeOrTable(sqlQuery, dct['site'])
+    qs = model.get_database().select(Constructor.get_qs_concat(Constructor))
     return qs, fields
+
+def create_dogovor(usr, tp, data1, data2):
+    text = ''
+    if(tp == 'О Пополнение баланса'):
+        text = '<p>Данный договор подверждает, что {} пополнил баланс на {}</p>'.format(usr.first_name, data1)
+        text += '<p>Текущий баланс составляет {}</p>'.format(data2)
+    elif (tp=='О предоставлении услуг'):
+        text = '<p>Данный договор подверждает, что {} заключил договор о {}'.format(usr.first_name, tp)
+        text+='<p>Была предоставлена услуга {} для сайта {}'.format(data2.name, data1.name)
+    elif (tp=='Заключение договора'):
+        pass
+    b = Dogovor(type=tp, user=usr, text=text)
+    b.save()
